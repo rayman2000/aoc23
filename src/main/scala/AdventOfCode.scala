@@ -2,7 +2,7 @@ import scala.io.Source
 
 object AdventOfCode {
   def main(args: Array[String]): Unit = {
-    val solver = new Day2()
+    val solver = new Day4()
     println(solver.solve2())
   }
 }
