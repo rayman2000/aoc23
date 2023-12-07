@@ -2,18 +2,24 @@ import scala.io.Source
 
 object AdventOfCode {
   def main(args: Array[String]): Unit = {
-    val solver = new Day4()
-    println(solver.solve2())
+    val solver = new Day7()
+    println(solver.solve1())
   }
 }
 
 trait LoadsInput {
-  def load(file: String): List[String] = {
-    println("Loading input")
+  def loadLines(file: String): List[String] = {
     val bufferedSource = Source.fromFile(s"src/main/resources/$file")
     val lines = bufferedSource.getLines.toList
     bufferedSource.close
     lines
+  }
+
+  def loadWhole(file: String): String = {
+    val bufferedSource = Source.fromFile(s"src/main/resources/$file")
+    val res = bufferedSource.mkString
+    bufferedSource.close
+    res
   }
 }
 

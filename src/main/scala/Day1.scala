@@ -1,6 +1,6 @@
 class Day1 extends LoadsInput with StringOps {
 
-  private val lines = load("day1.txt")
+  private val lines = loadLines("day1.txt")
 
 
   def solve1(): Int = {

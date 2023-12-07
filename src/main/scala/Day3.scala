@@ -2,7 +2,7 @@ import scala.collection.mutable.ListBuffer
 
 class Day3 extends LoadsInput {
 
-  private val lines = load("day3.txt")
+  private val lines = loadLines("day3.txt")
   //private val lines = "467..114..\n...*......\n..35..633.\n......#...\n617*......\n.....+.58.\n..592.....\n......755.\n...$.*....\n.664.598..".split("\n").toList
 
   def solve1(): Int = {
