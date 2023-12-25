@@ -1,8 +1,9 @@
+import scala.collection.{SeqLike, SeqOps}
 import scala.io.Source
 
 object AdventOfCode {
   def main(args: Array[String]): Unit = {
-    val solver = new Day12()
+    val solver = new Day16()
     println(solver.solve1())
   }
 }
@@ -37,4 +38,15 @@ trait StringOps {
                                                             .replace("nine", "ni9ne")
 
   def firstAndLastChar(): String => String = (s: String) => s"${s(0)}${s.last}"
+
+}
+
+trait MatrixOps {
+
+  def matrixToString(m: Seq[Seq[String]]): String = {
+    m.map(_.mkString("")).mkString("\n")
+  }
+  def printMatrix(m: Seq[Seq[String]]) = {
+    println(matrixToString(m))
+  }
 }
